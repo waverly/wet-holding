@@ -1,0 +1,45 @@
+@import "reset";
+@import "general";
+
+.nav-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 20%;
+  right: 0;
+  width: 60%;
+  background-color: transparent;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  z-index: $z-nav;
+  text-transform: uppercase;
+  color: white;
+  .nav-item {
+    a {
+      color: white;
+      &:hover {
+        color: lightblue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $break-phone) {
+  .nav-wrap {
+    position: relative;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    height: 30vh;
+    .nav-item {
+      height: 28px;
+      a {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}

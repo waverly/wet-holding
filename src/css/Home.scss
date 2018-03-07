@@ -1,0 +1,51 @@
+@import "general";
+
+.home-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  .video-container {
+    width: 60%;
+  }
+
+  .videoWrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  .videoWrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .holding-img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $break-phone) {
+  .home-wrap {
+    padding: 5em;
+    height: 70vh;
+    min-height: auto;
+
+    .video-container {
+      width: 100vw;
+
+      .videoWrap {
+        width: 100vw;
+      }
+    }
+  }
+}
